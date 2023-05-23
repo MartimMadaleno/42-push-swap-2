@@ -12,12 +12,13 @@
 
 #include "../push_swap.h"
 
-void run_function(func_ptr func, t_list **stack_a, t_list **stack_b, int times)
+void	run_function(t_func_ptr func, t_list **stack_a,
+			t_list **stack_b, int times)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(i < times)
+	while (i < times)
 	{
 		func(stack_a, stack_b);
 		i++;

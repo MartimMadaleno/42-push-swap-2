@@ -26,45 +26,44 @@ t_list	*get_stack_before_bottom(t_list *lst)
 	return (lst);
 }
 
-int getPositive(int num)
+int	get_positive(int num)
 {
-    if (num < 0) {
-        return -num;
-    } else {
-        return num;
-    }
+	if (num < 0)
+		return (-num);
+	else
+		return (num);
 }
 
-int get_media(t_list *lst)
+int	get_media(t_list *lst)
 {
-	t_list *tmp;
-	int media;
-	int count;
+	t_list	*tmp;
+	int		media;
+	int		count;
 
 	tmp = lst;
 	media = 0;
 	count = 0;
-	while(tmp)
+	while (tmp)
 	{
 		media += tmp->index;
 		count++;
 		tmp = tmp->next;
 	}
 	media /= count;
-	return media;
+	return (media);
 }
 
-int get_stack_len(t_list *lst)
+int	get_stack_len(t_list *lst)
 {
-	t_list *tmp;
-	int count;
+	t_list	*tmp;
+	int		count;
 
 	tmp = lst;
 	count = 0;
-	while(tmp)
+	while (tmp)
 	{
 		count++;
 		tmp = tmp->next;
 	}
-	return count;
+	return (count);
 }

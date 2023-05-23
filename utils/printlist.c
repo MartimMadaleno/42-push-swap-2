@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printlist.c                                        :+:      :+:    :+:   */
+/*   print_list.c                                        :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmendes- <mmendes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,12 +12,16 @@
 
 #include "../push_swap.h"
 
-void printList(t_list *head)
+void	print_list(t_list *head)
 {
-    t_list* temp = head;
-    while (temp != NULL) {
-        printf("Num = %d Index = %d Tmp = %d\n", temp->value, temp->index, temp->tmp);
-        temp = temp->next;
-    }
-    printf("\n");
+	t_list	*tmp;
+
+	tmp = head;
+	while (tmp != NULL)
+	{
+		printf("Num = %d Index = %d Tmp = %d\n",
+			tmp->value, tmp->index, tmp->tmp);
+		tmp = tmp->next;
+	}
+	printf("\n");
 }

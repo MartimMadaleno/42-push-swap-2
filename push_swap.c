@@ -37,12 +37,10 @@ int	main(int argc, char **argv)
 	if (!is_correct_input(argv))
 		return (printf("Error\n"));
 	if (argc < 3)
-		return 0;
+		return (0);
 	list_b = NULL;
 	list_a = fill_list_a(list_a, argv);
 	sort(argc, &list_a, &list_b);
-	printList(list_a);
-	// printList(list_b);
 	free_stack(&list_a);
 	free_stack(&list_b);
 	return (0);

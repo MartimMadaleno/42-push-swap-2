@@ -12,36 +12,36 @@
 
 #include "../push_swap.h"
 
-static int checkdoubles(char **argv, int i)
+static int	checkdoubles(char **argv, int i)
 {
-	int num;
+	int	num;
 
 	num = ft_atoi(argv[i]);
-	while(argv[++i])
+	while (argv[++i])
 	{
-		if(ft_atoi(argv[i]) == num)
+		if (ft_atoi(argv[i]) == num)
 			return (0);
 	}
 	return (1);
 }
 
-int is_correct_input(char **argv)
+int	is_correct_input(char **argv)
 {
-	int i;
-	int h;
+	int	i;
+	int	h;
 
 	i = 0;
 	h = -1;
-	while(argv[++i])
+	while (argv[++i])
 	{
-		while(argv[i][++h])
+		h = -1;
+		while (argv[i][++h])
 		{
-			if(argv[i][h] == '-')
+			if (argv[i][h] == '-')
 				h++;
-			if(!ft_isdigit(argv[i][h]))
+			if (!ft_isdigit(argv[i][h]))
 				return (0);
 		}
-		h = -1;
 		if (!checkdoubles(argv, i))
 			return (0);
 	}

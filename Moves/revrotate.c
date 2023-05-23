@@ -26,7 +26,6 @@ static void	rev_rotate(t_list **stack)
 	before_tail->next = NULL;
 }
 
-
 void	do_rra(t_list **stack_a, t_list **stack_b)
 {
 	rev_rotate(stack_a);
